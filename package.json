@@ -1,0 +1,19 @@
+{
+  "name": "adidas_weather",
+  "version": "1.0.0",
+  "description": "Adidas take-home coding challenge.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yerlan/adidas_weather_api.git"
+  },
+  "author": "Yerlan Mangazbayev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yerlan/adidas_weather_api/issues"
+  },
+  "homepage": "https://github.com/Yerlan/adidas_weather_api#readme"
+}
