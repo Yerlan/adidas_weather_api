@@ -4,6 +4,7 @@
   "description": "Adidas take-home coding challenge.",
   "main": "app.js",
   "scripts": {
+    "start": "babel-node app.js --presets es2015",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/Yerlan/adidas_weather_api/issues"
   },
-  "homepage": "https://github.com/Yerlan/adidas_weather_api#readme"
+  "homepage": "https://github.com/Yerlan/adidas_weather_api#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.3",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
