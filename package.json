@@ -7,6 +7,9 @@
     "start": "babel-node app.js --presets es2015",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "6.11.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yerlan/adidas_weather_api.git"

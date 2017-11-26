@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     Define expiration time for the cached weather data.
     We set 6 hours by default. Read further in /models/forecast.js file
   */
-  const cacheExpiredIn = 10;
+  const cacheExpiredIn = 60 * 60 * 6;
 
   /* Call our Forecast class and pass request params */
   let forecast = new Forecast(req)
