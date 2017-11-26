@@ -2,7 +2,7 @@ import API from '../api/api';
 import redis from 'redis';
 import city from 'redis';
 import fs from 'fs';
-const client = redis.createClient();
+const client = redis.createClient(process.env.REDIS_URL);
 
 export default class Forecast {
 
