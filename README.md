@@ -63,6 +63,16 @@ So why Redis and how do we store cache data? I decided to go with Redis, as it's
 
 ----------
 
+**Tests**
+
+To run tests go to https://frozen-dawn-22733.herokuapp.com/test or http://127.0.0.1:5000/test.
+
+It will run an automated test picking random city and calling API with a random but correct params. You will receive genuine weather forecast, however.
+
+----------
+
+**Stack**
+
 The following is the **full** stack of tools and dependencies used in this project.
 
  - Node Express JS as the foundation
