@@ -58,6 +58,7 @@ const getForecastByCityName = (params) => {
 
 }
 
+
 const getSunActivity = (params) => {
 
   if (params && params.lat && params.lon) {
@@ -80,5 +81,5 @@ export default {
   getForecastByCityID: getForecastByCityID,
   getForecastByLatLon: getForecastByLatLon,
   getForecastByCityName: getForecastByCityName,
-  getSunActivity: getSunActivity,
+  getSunActivity: getSunActivity
 }

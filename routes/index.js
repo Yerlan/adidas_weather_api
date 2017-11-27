@@ -21,9 +21,12 @@ router.get('/', (req, res, next) => {
 /* Testing all our modules */
 router.get('/test', (req, res, next) => {
 
-  //Cache expiry for 20 sec for the test
+  console.time("server_response_time");
+
+  /* Cache expiry for 20 sec for the test */
   const cacheExpiredIn = 20;
 
+  /* Define some test cities */
   const testData = [
     {
       "id": 2905457,
@@ -72,6 +75,7 @@ router.get('/test', (req, res, next) => {
     },
   ];
 
+  /* Pick random city and random test type */
   const testType = Math.floor(Math.random() * 3) + 1;
   const cityID = Math.floor(Math.random() * testData.length) + 0;
 

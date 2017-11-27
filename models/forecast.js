@@ -88,12 +88,15 @@ export default class Forecast {
               }),
             ]).then((response) => {
 
-              /* Set sunset/sunrise */
-              response[0].sunrise = response[1].results.sunrise;
-              response[0].sunset = response[1].results.sunset;
+              response[0].list = response[0].list.splice(0, 8);
+              response[0].cnt = response[0].list.length;
 
               /* Return weather data */
-              res.json(response[0]);
+              res.json({
+                forecast: response[0],
+                sunrise: response[1].results.sunrise,
+                sunset: response[1].results.sunset,
+              });
 
               console.timeEnd("server_response_time");
 
@@ -148,10 +151,15 @@ export default class Forecast {
                 }),
               ]).then((sunRes) => {
 
-                response[0].sunrise = sunRes[0].results.sunrise;
-                response[0].sunset = sunRes[0].results.sunset;
+                response[0].list = response[0].list.splice(0, 8);
+                response[0].cnt = response[0].list.length;
 
-                res.json(response[0]);
+                /* Return weather data */
+                res.json({
+                  forecast: response[0],
+                  sunrise: sunRes[0].results.sunrise,
+                  sunset: sunRes[0].results.sunset
+                });
 
                 console.timeEnd("server_response_time");
                 response[0].cached = true;
@@ -208,10 +216,15 @@ export default class Forecast {
                 }),
               ]).then((sunRes) => {
 
-                response[0].sunrise = sunRes[0].results.sunrise;
-                response[0].sunset = sunRes[0].results.sunset;
+                response[0].list = response[0].list.splice(0, 8);
+                response[0].cnt = response[0].list.length;
 
-                res.json(response[0]);
+                /* Return weather data */
+                res.json({
+                  forecast: response[0],
+                  sunrise: sunRes[0].results.sunrise,
+                  sunset: sunRes[0].results.sunset
+                });
 
                 console.timeEnd("server_response_time");
                 response[0].cached = true;
